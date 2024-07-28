@@ -9,7 +9,7 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
+  inline-size: 1205px; /*Увеличил ширину на 5px из-за скроллбара*/
   block-size: 100%;
   margin: auto;
   color: #fff;
@@ -35,4 +35,291 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.content {
+  height: 100vh;
+  align-content: center;
+  display: grid;
+  grid-template: 534px / 711px 405px;
+  gap: 30px;
+  align-items: end;
+}
+
+/*Видео слева*/
+
+.result__video-container {
+  margin-bottom: 16px;
+  max-height: 386px;
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*Форма поиска внизу слева*/
+
+fieldset {
+  border: none;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.search-form__textfield {
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  min-width: 225px;
+  max-height: 27px;
+  padding-top: 4px;
+  padding-left: 0px;
+  appearance: none;
+  color: #fff;
+}
+
+.search-form__fieldset-title {
+  margin-bottom: 5px;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #ffffff;
+  outline-offset: 1px;
+}
+
+.search-form__textfield:active {
+  border: 1px solid #fff;
+}
+
+/*Время суток по центру*/
+
+.search-form__fieldset {
+  width: 212px;
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/*Список утро день вечер*/
+
+.search-form__checkbox-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Чекбоксы*/
+
+.search-form__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form__label-text {
+  padding-left: 5px;
+}
+
+.search-form__label:hover > .search-form__label-text {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  background-color: #fff;
+  background-clip: content-box;
+  padding: 1px;
+}
+
+/*Кнопки*/
+
+.button {
+  height: 34px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.button:active {
+  background-color: #545050;
+  border: 1px solid #fff;
+}
+
+.button:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.search-form__submit-button {
+  min-width: 194px;
+  margin-top: 20px;
+}
+
+.more-button {
+  width: 100%;
+}
+
+/*Блок справа*/
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  height: 298px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  position: relative;
+}
+
+.content__card-link_current:active {
+  background-color: #545050;
+  padding: 2px;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  margin: 3px;
+}
+
+.content__video-card {
+  display: grid;
+  grid-template-columns: 200px 194px;
+}
+
+.content__video-card-description-container {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;  
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 0.9;
+  margin-top: 5px;
+}
+
+.content__video-card-thumbnail {
+  width: 100%;
+  max-height: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*Проявлю инициативу. Хоть не все св-ва нужны в данном случае,
+оставлю их в качестве примера*/
+
+.content__list::-webkit-scrollbar {
+  width: 5px;               /* ширина scrollbar */
+}
+
+.content__list::-webkit-scrollbar-track {
+  background: transparent;        /* цвет дорожки */
+}
+
+.content__list::-webkit-scrollbar-thumb {
+  background-color: #545050;    /* цвет плашки */
+  /*border-radius: 40px;        закругления плашки */
+  /*border: 3px solid #c41a1a;  padding вокруг плашки */
 }
