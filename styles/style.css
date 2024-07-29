@@ -51,8 +51,8 @@ ol {
   height: 100vh;
   align-content: center;
   display: grid;
-  grid-template: 534px / 711px 405px;
-  gap: 30px;
+  grid-template: 534px / 711px 407px;
+  gap: 28px;
   align-items: end;
 }
 
@@ -195,7 +195,7 @@ fieldset {
 
 .button:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .button:active {
@@ -214,7 +214,8 @@ fieldset {
 }
 
 .more-button {
-  width: 100%;
+  width: 99%;
+  margin: 2px;
 }
 
 /*Блок справа*/
@@ -222,7 +223,7 @@ fieldset {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 23px;
+  gap: 20px;
 }
 
 .title {
@@ -232,6 +233,7 @@ fieldset {
   line-height: 70px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  padding-left: 3px;
 }
 
 .content__accent {
@@ -239,23 +241,32 @@ fieldset {
 }
 
 .content__list {
-  height: 298px;
+  height: 300px;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
+.content__list-item {
+  margin-bottom: 26px;
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0px;
+}
+
 .content__card-link {
   display: block;
   text-decoration: none;
   color: #fff;
-  margin-bottom: 30px;
-  padding: 2px;
+  margin: 2px;
+  height: 107px;
 }
 
 .content__card-link_current {
   background-color: #545050;
+  max-width: 394px;
 }
 
 .content__card-link:hover {
@@ -269,16 +280,18 @@ fieldset {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 1px;
 }
 
 .content__video-card {
   display: grid;
-  grid-template-columns: 200px 194px;
+  grid-template: 107px / 202px 194px;
 }
 
 .content__video-card-description-container {
   overflow-wrap: break-word;
+  padding-top: 5px;
+  padding-left: 3px;
 }
 
 .content__video-card-title {
@@ -287,7 +300,6 @@ fieldset {
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
-  padding-top: 3px;
 }
 
 .content__video-card-description {
@@ -303,6 +315,8 @@ fieldset {
   max-height: 103px;
   object-fit: cover;
   object-position: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /*Проявлю инициативу. Хоть не все св-ва нужны в данном случае,
